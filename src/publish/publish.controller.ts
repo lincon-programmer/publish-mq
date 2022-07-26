@@ -8,6 +8,7 @@ export class PublishController {
 
   @Post()
   publishMessage(@Body() messageDto: MessageDto): string {
-    return this.publishService.publishMessage(messageDto);
+    this.publishService.publishMessage(messageDto);
+    return 'Mensagem enviada com sucesso';
   }
 }
